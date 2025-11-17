@@ -1,25 +1,260 @@
 ---
-import '../styles/global.css';
-// Component Imports
-import Button from '../components/Button.astro';
-
-// Full Astro Component Syntax:
-// https://docs.astro.build/basics/astro-components/
+import "../styles/global.css";
+import Navbar from "../pages/navbar.astro";
+import { Font } from "astro:assets";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro + TailwindCSS</title>
-	</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Just Learning something</title>
+    <Font cssVariable="--font-varela-round" preload />
+  </head>
 
-	<body>
-		<div class="grid place-items-center h-screen content-center">
-			<Button>Tailwind Button in Astro!</Button>
-			<a href="/markdown-page" class="p-4 underline">Markdown is also supported...</a>
-		</div>
-	</body>
+  <body class="bg-[#fefefe]">
+    <!--Header-->
+    <section
+      class="saturate-120 bg-[url(/img/solar-panel.jpg)] bg-center bg-cover m-4 rounded-[25px] shadow-xl h-dvh"
+    >
+      <div
+        class="absolute inset-0 bg-linear-to-r from-black/30 from-30% via-gray-500/10 to-transparent rounded-[25px] shadow-xl h-dvh"
+      >
+      </div>
+      <div class="x-1 py-10 rounded-[25px] shadow-xl">
+        <!-- Navbar -->
+        <header class="drop-shadow-2xl">
+          <Navbar />
+        </header>
+
+        <!-- Main Content -->
+        <div class="grid-cols-2 grid">
+          <main class="px-16 py-12 mt-20">
+            <section class="max-w-2xl">
+              <!-- Badge -->
+              <div class="inline-block mb-6 drop-shadow-2xl">
+                <span
+                  class="text-md shadow-xl bg-transparent border border-white/30 text-white px-6 py-3 rounded-full"
+                >
+                  #1 Evergreen in Life | Renewable
+                </span>
+              </div>
+
+              <!-- Heading -->
+              <h1
+                class="text-8xl w-[110%] font-bold text-white mb-5 leading-tight drop-shadow"
+              >
+                New Energy for<br />the Future
+              </h1>
+
+              <!-- Description -->
+              <p
+                class="text-white/80 mb-10 max-w-lg text-lg leading-relaxed drop-shadow-2xl"
+              >
+                We create clean and sustainable energy solutions to power
+                communities and protect the future.
+              </p>
+
+              <!-- Buttons -->
+              <div class="flex gap-4">
+                <button
+                  class="drop-shadow-2xl text-1xl shadow-xl bg-[#064F74] text-white font-medium px-6 py-3 rounded-full hover:scale-105 transition-all duration-200"
+                >
+                  Get In touch
+                </button>
+                <button
+                  class="drop-shadow-2xl text-1xl shadow-xl bg-transparent border border-white/30 text-white font-medium px-6 py-3 rounded-full hover:bg-white/10 hover:scale-105 transition-all duration-200"
+                >
+                  Our services
+                </button>
+              </div>
+            </section>
+          </main>
+          <section
+            class="grid drop-shadow-2xl bg-[#fefefe] rounded-[25px] shadow-xl w-[57%] h-[85%] translate-x-1/5 self-center mx-auto translate-y-2/4 my-auto"
+          >
+            <figure class="rounded-[15px] h-75 ml-3 mr-3 mt-3">
+              <img
+                src="/img/card-image-pointer.jpg"
+                alt="Solar panel installation showcasing our sustainable energy solutions"
+                class="w-full h-full object-cover rounded-[15px]"
+              />
+            </figure>
+            <p
+              class="text-[#747474] font-semibold text-left -mt-6 ml-4 mr-4 text-xl"
+            >
+              Where innovation meets design bringing visions to life. Explore
+              creativity in action!
+            </p>
+            <dl class="grid-cols-3 grid text-left -mt-6 ml-5">
+              <dd>
+                <p class="text-[#064F74] text-4xl font-extrabold m-2">6mil</p>
+                <p class="text-[#747474] text-xl font-bold">Annual Income</p>
+              </dd>
+              <dd>
+                <p class="text-[#064F74] text-4xl font-extrabold m-2">316</p>
+                <p class="text-[#747474] text-xl font-bold">Completed</p>
+              </dd>
+              <dd>
+                <p class="text-[#064F74] text-4xl font-extrabold m-2">120k</p>
+                <p class="text-[#747474] text-xl font-bold">Employees</p>
+              </dd>
+            </dl>
+          </section>
+        </div>
+      </div>
+    </section>
+    <!--Middle-Top Content-->
+    <section class="grid m-20 mt-30 -mb-9">
+      <div class="grid-cols-2 grid">
+        <h2 class="text-6xl font-bold w-[90%] text-left">
+          Focusing on quality, we maintain customer trust
+        </h2>
+        <p
+          class="text-[#747474] font-semibold text-2xl leading-relaxed ml-60 text-justify"
+        >
+          We ensure that every installation we build has strict quality checks.
+          Sustainable solutions for an environmentally friendly and renewable
+          future.
+        </p>
+      </div>
+
+      <div class="grid-cols-5 grid opacity-45 items-center gap-30 mt-20 w-auto">
+        <figure>
+          <img
+            src="/img/forbes-black.png"
+            alt="Forest representing our commitment to sustainability"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/img/dailymotion-black.png"
+            alt="Forest representing our commitment to sustainability"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/img/spotify-black.png"
+            alt="Forest representing our commitment to sustainability"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/img/fiverr.png"
+            alt="Forest representing our commitment to sustainability"
+          />
+        </figure>
+        <figure>
+          <img
+            src="/img/sony-black.png"
+            alt="Forest representing our commitment to sustainability"
+          />
+        </figure>
+      </div>
+    </section>
+    <!-- Middle-Bottom Content -->
+    <div class="bg-[#F6F8FA]">
+      <section class="grid m-20 mt-30">
+        <div class="inline-block mb-6 drop-shadow-2xl mt-30">
+          <span
+            class="text-md bg-transparent border border-[#064F74]/50 text-[#064F74] px-6 py-3 rounded-full"
+          >
+            #2 Our Services
+          </span>
+        </div>
+        <div class="grid-cols-2 grid">
+          <h2 class="text-6xl font-bold w-[90%] text-left">
+            We offer quality, with the best materials and service
+          </h2>
+          <p
+            class="text-[#747474] font-semibold text-2xl leading-relaxed ml-60 text-justify"
+          >
+            At our core, we are dedicated to equality. We carefully select the
+            finest materials and offer exceptional service to ensure every
+            detail exceeds your expectations.
+          </p>
+        </div>
+
+        <div class="grid-cols-5 grid items-center gap-30 mt-20 w-auto mb-15">
+          <section class="grid bg-[#fefefe] rounded-[10px] size-auto w-90">
+            <figure class="">
+              <img
+                class="size-15 revert bg-[#064F74] rounded-full m-4"
+                src="/favicon.svg"
+                alt=""
+              />
+            </figure>
+            <p class="text-black text-2xl font-bold ml-5">Layered Security</p>
+            <span class="m-4 text-black/60 text-justify font-extrabold">
+              With layered security, we ensure the safety of every unit we
+              provide.
+            </span>
+            <a href="" class="m-4 -mt-1 text-black/40">Learn more</a>
+          </section>
+          <section class="grid bg-[#fefefe] rounded-[10px] size-auto w-90">
+            <figure class="">
+              <img
+                class="w-15 h-15 bg-[#064F74] rounded-full m-4"
+                src="/favicon.svg"
+                alt=""
+              />
+            </figure>
+            <p class="text-black text-2xl font-bold ml-5">Layered Security</p>
+            <span class="m-4 text-black/60 text-justify font-extrabold">
+              With layered security, we ensure the safety of every unit we
+              provide.
+            </span>
+            <a href="" class="m-4 -mt-1 text-black/40">Learn more</a>
+          </section>
+          <section class="grid bg-[#fefefe] rounded-[10px] size-auto w-90">
+            <figure class="">
+              <img
+                class="w-15 h-15 bg-[#064F74] rounded-full m-4"
+                src="/favicon.svg"
+                alt=""
+              />
+            </figure>
+            <p class="text-black text-2xl font-bold ml-5">Layered Security</p>
+            <span class="m-4 text-black/60 text-justify font-extrabold">
+              With layered security, we ensure the safety of every unit we
+              provide.
+            </span>
+            <a href="" class="m-4 -mt-1 text-black/40">Learn more</a>
+          </section>
+          <section class="grid bg-[#fefefe] rounded-[10px] size-auto w-90">
+            <figure class="">
+              <img
+                class="w-15 h-15 bg-[#064F74] rounded-full m-4"
+                src="/favicon.svg"
+                alt=""
+              />
+            </figure>
+            <p class="text-black text-2xl font-bold ml-5">Layered Security</p>
+            <span class="m-4 text-black/60 text-justify font-extrabold">
+              With layered security, we ensure the safety of every unit we
+              provide.
+            </span>
+            <a href="" class="m-4 -mt-1 text-black/40">Learn more</a>
+          </section>
+          <section class="grid bg-[#fefefe] rounded-[10px] size-auto w-90">
+            <figure class="">
+              <img
+                class="w-15 h-15 bg-[#064F74] rounded-full m-4"
+                src="/favicon.svg"
+                alt=""
+              />
+            </figure>
+            <p class="text-black text-2xl font-bold ml-5">Layered Security</p>
+            <span class="m-4 text-black/60 text-justify font-extrabold">
+              With layered security, we ensure the safety of every unit we
+              provide.
+            </span>
+            <a href="" class="m-4 -mt-1 text-black/40">Learn more</a>
+          </section>
+        </div>
+      </section>
+    </div>
+  </body>
 </html>
