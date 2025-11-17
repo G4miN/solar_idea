@@ -9,3 +9,7 @@ jobs:
         steps:
             - name: Hello world action step
               run: echo "hello dev!"
+            - name: Another step
+              run: ls -l
+            - name: Display date
+              run: date
