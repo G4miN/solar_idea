@@ -11,5 +11,4 @@ jobs:
         runs-on: ubuntu-18.04
         steps:
             - name: Hello world action step
-              run: |
-                echo "hello dev!"
+              run: echo "hello dev!"
